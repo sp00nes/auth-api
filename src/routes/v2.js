@@ -8,7 +8,6 @@ const bearerAuth = require('../auth/middleware/bearer.js');
 const permissions = require('../auth/middleware/acl.js');
 
 router.param('model', (req, res, next) => {
-  console.log('WE MADE IT TO ROUTER.PARAM');
   const modelName = req.params.model;
   if (dataModules[modelName]) {
     req.model = dataModules[modelName];
